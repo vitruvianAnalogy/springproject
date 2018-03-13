@@ -9,7 +9,7 @@
 	 -->
 	 <bean id="triangle" class="com.nishant.spring.Triangle">
 	 	<constructor-arg value="Equilateral" />
-	 	<constructor-arg value="20" />
+	 	<constructor-arg type="int" value="20" />
 	 </bean>
 
 </beans>
