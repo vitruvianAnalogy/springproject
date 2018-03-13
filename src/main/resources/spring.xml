@@ -3,9 +3,13 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-	<bean id="triangle" class="com.nishant.spring.Triangle">
+	<!-- <bean id="triangle" class="com.nishant.spring.Triangle">
 		<property name="type" value="Equilateral"></property>
 	</bean>
-	
+	 -->
+	 <bean id="triangle" class="com.nishant.spring.Triangle">
+	 	<constructor-arg value="Equilateral" />
+	 	<constructor-arg value="20" />
+	 </bean>
 
 </beans>
