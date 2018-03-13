@@ -10,5 +10,7 @@ public class DrawingApp {
 			
 			Triangle obj = (Triangle) context.getBean("triangle");
 			obj.draw();
+			TriangleWithPoints triangleWithPoints = (TriangleWithPoints) context.getBean("triangleWithPoints");
+			triangleWithPoints.draw();
 		}
 }
