@@ -49,5 +49,24 @@
 	 	</list>
 	 	</property>
 	 </bean>
+	 
+	 <bean id="triangleWithAutowiring" class="com.nishant.spring.TriangleWithAutowiring" autowire="byName">
+	 </bean>
+	 
+	 <bean id="pointX" class="com.nishant.spring.Point">
+	 	<property name="x" value="0"></property>
+	 	<property name="y" value="0"></property>
+	 </bean>
+	 
+	 <bean id="pointY" class="com.nishant.spring.Point">
+	 	<property name="x" value="20"></property>
+	 	<property name="y" value="0"></property>
+	 </bean>
+	 
+	 <bean id="pointZ" class="com.nishant.spring.Point">
+	 	<property name="x" value="0"></property>
+	 	<property name="y" value="20"></property>
+	 </bean>
+	 
 
 </beans>
