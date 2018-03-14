@@ -11,6 +11,7 @@
 	 	<constructor-arg index="0" value="Equilateral" />
 	 	<constructor-arg index="1" type="int" value="20" />
 	 </bean>
+	 
 	 <bean id="triangleWithPoints" class="com.nishant.spring.TriangleWithPoints">
 	 	<property name="pointA">
 		 	<ref bean="zeroPoint"/>
@@ -23,15 +24,30 @@
 	 	</property>
 	 	<property name="pointC" ref="point3" />
 	 </bean>
+	 
 	 <bean id="zeroPoint" class="com.nishant.spring.Point">
 	 	<property name="x" value="0"></property>
 	 	<property name="y" value="0"></property>
 	 </bean>
-	 	 <bean id="point3" class="com.nishant.spring.Point">
+	 
+	 <bean id="point3" class="com.nishant.spring.Point">
 	 	<property name="x" value="20"></property>
 	 	<property name="y" value="0"></property>
 	 </bean>
 	 
 	 <alias name="triangle" alias="triangle-alias"/>
+	 
+	 <bean id="triangleWithListOfPoints" class="com.nishant.spring.TriangleWithListOfPoints">
+	 	<property name="listOfPoints">
+	 	<list>
+	 		<ref bean="zeroPoint"/>
+	 		<bean id="point4" class="com.nishant.spring.Point">
+	 			<property name="x" value="-20"></property>
+	 			<property name="y" value="0"></property>
+	 		</bean>
+	 		<ref bean="point3"/>
+	 	</list>
+	 	</property>
+	 </bean>
 
 </beans>
