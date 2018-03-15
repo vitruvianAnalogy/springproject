@@ -58,8 +58,8 @@
 	 </bean>
 	 
 	 <bean id="pointY" class="com.nishant.spring.Point">
-	 	<property name="x" value="20"></property>
-	 	<property name="y" value="0"></property>
+	 	<property name="x" value="${pointY.pointX}" />
+	 	<property name="y" value="${pointY.pointY}" />
 	 </bean>
 	 
 	 <bean id="pointZ" class="com.nishant.spring.Point">
@@ -72,5 +72,8 @@
 	</bean>
 	
 	<!-- <bean class="com.nishant.spring.DisplayNameBeanPostProcessor" /> -->
-	<bean class="com.nishant.spring.MyBeanFactoryPostProcessor" />
+	<!-- <bean class="com.nishant.spring.MyBeanFactoryPostProcessor" /> -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="pointsconfig.properties"/>
+	</bean>
 </beans>
