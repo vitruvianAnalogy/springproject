@@ -12,7 +12,7 @@
 	 	<constructor-arg index="1" type="int" value="20" />
 	 </bean>
 	 
-	 <bean id="triangleWithPoints" class="com.nishant.spring.TriangleWithPoints" scope="prototype">
+	 <bean id="triangleWithPoints" class="com.nishant.spring.TriangleWithPoints" scope="prototype" parent="parentTriangle">
 	 	<property name="pointA">
 		 	<ref bean="zeroPoint"/>
 		</property>
@@ -22,7 +22,6 @@
 	 			<property name="y" value="0"></property>
 	 		</bean>
 	 	</property>
-	 	<property name="pointC" ref="point3" />
 	 </bean>
 	 
 	 <bean id="zeroPoint" class="com.nishant.spring.Point">
@@ -68,5 +67,7 @@
 	 	<property name="y" value="20"></property>
 	 </bean>
 	 
-
+	<bean id="parentTriangle" class="com.nishant.spring.TriangleWithPoints">
+		<property name="pointC" ref="point3"></property>
+	</bean>
 </beans>
