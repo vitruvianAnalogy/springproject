@@ -35,4 +35,12 @@ public class Triangle {
 	public void setHeight(int height) {
 		this.height = height;
 	}
+	
+	public void myInit(){
+		System.out.println("This method runs when bean is created");
+	}
+	
+	public void myDestroy(){
+		System.out.println("This method runs when bean is destroyed");
+	}
 }
