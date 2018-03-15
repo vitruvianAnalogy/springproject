@@ -71,5 +71,6 @@
 		<property name="pointC" ref="point3"></property>
 	</bean>
 	
-	<bean class="com.nishant.spring.DisplayNameBeanPostProcessor" />
+	<!-- <bean class="com.nishant.spring.DisplayNameBeanPostProcessor" /> -->
+	<bean class="com.nishant.spring.MyBeanFactoryPostProcessor" />
 </beans>
