@@ -70,4 +70,6 @@
 	<bean id="parentTriangle" class="com.nishant.spring.TriangleWithPoints">
 		<property name="pointC" ref="point3"></property>
 	</bean>
+	
+	<bean class="com.nishant.spring.DisplayNameBeanPostProcessor" />
 </beans>
