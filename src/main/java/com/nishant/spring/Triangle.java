@@ -1,6 +1,6 @@
 package com.nishant.spring;
 
-public class Triangle {
+public class Triangle implements Shape{
 	
 	private String type;
 	private int height;

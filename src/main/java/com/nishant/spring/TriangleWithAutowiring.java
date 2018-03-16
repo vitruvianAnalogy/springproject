@@ -1,6 +1,6 @@
 package com.nishant.spring;
 
-public class TriangleWithAutowiring {
+public class TriangleWithAutowiring implements Shape{
 	private Point pointX;
 	private Point pointY;
 	private Point pointZ;

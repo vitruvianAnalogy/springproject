@@ -1,6 +1,6 @@
 package com.nishant.spring;
 
-public class TriangleWithPoints {
+public class TriangleWithPoints implements Shape{
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;

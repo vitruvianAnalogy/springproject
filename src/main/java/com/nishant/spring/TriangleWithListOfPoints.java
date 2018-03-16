@@ -2,7 +2,7 @@ package com.nishant.spring;
 
 import java.util.List;
 
-public class TriangleWithListOfPoints {
+public class TriangleWithListOfPoints implements Shape {
 		private List<Point> listOfPoints;
 
 		public List<Point> getListOfPoints() {
