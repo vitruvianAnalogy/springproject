@@ -1,9 +1,13 @@
 package com.nishant.spring;
 
-public class Triangle implements Shape{
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.ApplicationEventPublisherAware;
+
+public class Triangle implements Shape, ApplicationEventPublisherAware{
 	
 	private String type;
 	private int height;
+	ApplicationEventPublisher publisher;
 	
 	public Triangle (String type){
 		this.type = type;
@@ -24,6 +28,8 @@ public class Triangle implements Shape{
 
 	public void draw(){
 		System.out.println("Triangle BAM! " +getType()+" Hell yeah!!!! and " + getHeight() + " feet tall");
+		DrawEvent event = new DrawEvent(this);
+		publisher.publishEvent(event);
 	}
 
 
@@ -42,5 +48,9 @@ public class Triangle implements Shape{
 	
 	public void myDestroy(){
 		System.out.println("This method runs when bean is destroyed");
+	}
+
+	public void setApplicationEventPublisher(ApplicationEventPublisher publisher) {
+		this.publisher = publisher;
 	}
 }
